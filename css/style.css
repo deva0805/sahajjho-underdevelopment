@@ -1,3 +1,7 @@
+/* ===========================
+   RESET
+=========================== */
+
 *{
     margin:0;
     padding:0;
@@ -5,34 +9,27 @@
 }
 
 body{
-
     font-family:'Poppins',sans-serif;
-
     background:#081321;
-
-    overflow:hidden;
-
     color:white;
-
+    overflow:hidden;
 }
 
-/* Night Background */
+/* ===========================
+   NIGHT BACKGROUND
+=========================== */
 
 .night{
-
     width:100%;
-
     height:100vh;
-
     position:relative;
-
     overflow:hidden;
-
     background:linear-gradient(to bottom,#081321,#020617);
-
 }
 
-/* Stars */
+/* ===========================
+   STARS
+=========================== */
 
 .stars{
 
@@ -42,51 +39,53 @@ body{
 
     height:100%;
 
-    background-image:radial-gradient(white 1px,transparent 1px);
+    background-image:
+    radial-gradient(white 1px,transparent 1px);
 
-    background-size:70px 70px;
+    background-size:55px 55px;
 
     opacity:.35;
 
-    animation:twinkle 4s infinite alternate;
+    animation:twinkle 5s infinite alternate;
 
 }
 
-/* Moon */
+/* ===========================
+   MOON
+=========================== */
 
 .moon{
 
     position:absolute;
 
-    width:130px;
+    top:50px;
 
-    height:130px;
+    right:80px;
+
+    width:140px;
+
+    height:140px;
 
     border-radius:50%;
 
-    background:#fff7cc;
-
-    right:90px;
-
-    top:60px;
+    background:#fff5c7;
 
     box-shadow:
+    0 0 35px rgba(255,255,255,.5),
+    0 0 80px rgba(255,255,255,.35),
+    0 0 120px rgba(255,255,255,.2);
 
-    0 0 30px rgba(255,255,255,.6),
-
-    0 0 80px rgba(255,255,255,.4);
-
-    animation:moonGlow 3s infinite alternate;
+    animation:moonGlow 4s ease-in-out infinite alternate;
 
 }
 
-/* Center */
+/* ===========================
+   MAIN CONTAINER
+=========================== */
 
 .container{
 
     position:relative;
-
-    z-index:5;
 
     width:100%;
 
@@ -100,33 +99,49 @@ body{
 
     align-items:center;
 
+    z-index:10;
+
 }
 
-/* Tree */
+/* ===========================
+   TREE
+=========================== */
 
 .tree{
 
     position:relative;
 
-    margin-bottom:120px;
+    margin-bottom:130px;
 
 }
 
-/* Branch */
+/* ===========================
+   BRANCH
+=========================== */
 
 .branch{
 
     width:900px;
 
-    height:14px;
+    height:16px;
 
-    background:#6b4226;
+    border-radius:20px;
 
-    border-radius:30px;
+    background:linear-gradient(
+        to right,
+        #5d3922,
+        #8a5635,
+        #5d3922
+    );
+
+    box-shadow:
+        0 4px 10px rgba(0,0,0,.45);
 
 }
 
-/* Panda */
+/* ===========================
+   PANDA
+=========================== */
 
 .panda{
 
@@ -138,33 +153,41 @@ body{
 
     transform:translateX(-50%);
 
-    bottom:-90px;
+    bottom:-125px;
 
-    animation:breathe 4s infinite ease-in-out;
+    animation:breathe 4s ease-in-out infinite;
 
 }
 
-/* ZZZ */
+/* ===========================
+   ZZZ
+=========================== */
 
 .zzz{
 
     position:absolute;
 
-    left:54%;
+    left:53%;
 
-    top:-55px;
+    top:-10px;
 
-    color:white;
+    transform:translateX(-50%);
 
     font-size:28px;
 
     letter-spacing:8px;
 
+    color:white;
+
+    opacity:.8;
+
     animation:sleepText 3s infinite;
 
 }
 
-/* Board */
+/* ===========================
+   BOARD
+=========================== */
 
 .board{
 
@@ -174,7 +197,9 @@ body{
 
 }
 
-/* Rope */
+/* ===========================
+   ROPES
+=========================== */
 
 .rope{
 
@@ -184,7 +209,7 @@ body{
 
     height:70px;
 
-    background:#dbc49d;
+    background:#e5d3b3;
 
     top:-70px;
 
@@ -192,47 +217,59 @@ body{
 
 .left{
 
-    left:60px;
+    left:65px;
 
 }
 
 .right{
 
-    right:60px;
+    right:65px;
 
 }
 
-/* Wooden Board */
+/* ===========================
+   WOODEN SIGN
+=========================== */
 
 .sign{
 
-    background:#93633f;
+    width:760px;
 
-    padding:35px 70px;
-
-    border-radius:12px;
+    padding:45px 70px;
 
     text-align:center;
 
-    box-shadow:0 15px 40px rgba(0,0,0,.45);
+    border-radius:12px;
+
+    background:linear-gradient(
+        to right,
+        #7a4e2b,
+        #9c6a43,
+        #7a4e2b
+    );
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.45);
 
 }
 
 .sign h2{
 
-    font-size:28px;
-
-    margin-bottom:10px;
+    font-size:30px;
 
     color:#ffe5c2;
+
+    margin-bottom:15px;
+
+    letter-spacing:2px;
 
 }
 
 .sign h1{
 
-    font-size:48px;
+    font-size:54px;
 
-    margin-bottom:20px;
+    margin-bottom:25px;
 
 }
 
@@ -240,45 +277,43 @@ body{
 
     font-size:22px;
 
-    margin-top:10px;
+    line-height:1.8;
 
 }
 
-/* Email */
+/* ===========================
+   CONTACT
+=========================== */
 
 .contact{
 
-    margin-top:50px;
+    margin-top:55px;
 
-    font-size:24px;
+    text-align:center;
 
     color:#d1d5db;
 
 }
 
-/* Animations */
+.contact p:first-child{
 
-@keyframes swing{
+    font-size:18px;
 
-0%{
+    margin-bottom:10px;
 
-transform:rotate(2deg);
-
-}
-
-50%{
-
-transform:rotate(-2deg);
+    opacity:.8;
 
 }
 
-100%{
+.contact p:last-child{
 
-transform:rotate(2deg);
-
-}
+    font-size:24px;
 
 }
+
+/* ===========================
+   ANIMATIONS
+=========================== */
 
 @keyframes breathe{
 
@@ -302,17 +337,43 @@ transform:translateX(-50%) scale(1);
 
 }
 
-@keyframes moonGlow{
+@keyframes swing{
 
 0%{
 
-box-shadow:0 0 20px rgba(255,255,255,.4);
+transform:rotate(.8deg);
+
+}
+
+50%{
+
+transform:rotate(-.8deg);
 
 }
 
 100%{
 
-box-shadow:0 0 70px rgba(255,255,255,.8);
+transform:rotate(.8deg);
+
+}
+
+}
+
+@keyframes moonGlow{
+
+0%{
+
+box-shadow:
+0 0 20px rgba(255,255,255,.45),
+0 0 60px rgba(255,255,255,.2);
+
+}
+
+100%{
+
+box-shadow:
+0 0 40px rgba(255,255,255,.7),
+0 0 100px rgba(255,255,255,.35);
 
 }
 
@@ -322,7 +383,7 @@ box-shadow:0 0 70px rgba(255,255,255,.8);
 
 0%{
 
-opacity:.2;
+opacity:.25;
 
 }
 
@@ -338,9 +399,9 @@ opacity:.45;
 
 0%{
 
-transform:translateY(0);
-
 opacity:0;
+
+transform:translate(-50%,0);
 
 }
 
@@ -348,13 +409,15 @@ opacity:0;
 
 opacity:1;
 
+transform:translate(-50%,-12px);
+
 }
 
 100%{
 
-transform:translateY(-20px);
-
 opacity:0;
+
+transform:translate(-50%,-24px);
 
 }
 
